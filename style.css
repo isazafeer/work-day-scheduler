@@ -1,6 +1,7 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
+  background: lightgoldenrodyellow;
 }
 
 textarea {
@@ -9,7 +10,7 @@ textarea {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  padding: 5px;
 }
 
 .description {
@@ -56,4 +57,8 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+#clock {
+  font-size: 25px;
 }
