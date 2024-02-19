@@ -1,3 +1,48 @@
+var options = {
+  startHour: 9,
+  endHour: 17,
+}
+
+function updateTimeslots() {
+
+  console.log('updateTimeslots');
+  var currentHour = dayjs().hour();
+
+  $('.time-block').each(function (index, element) {
+    var hour = $(element).attr('data-hour');
+    console.log(hour, currentHour);
+
+    if (hour < currentHour) {
+      $(element).find('.description').addClass('past');
+    }
+    else if (hour == currentHour) {
+      $(element).find('description').addClass('present');
+    }
+    else {
+      $(element).find('.description').addClass('future');
+    }
+  });
+}
+
+  //live clock// 
+
+const timeElement = document.getElementById("clock");
+
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    timeElement.innerText = clockStr;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
