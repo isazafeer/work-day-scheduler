@@ -24,7 +24,7 @@ function updateTimeslots() {
   });
 }
 
-  //live clock// 
+  // Live clock and date //
 
 const timeElement = document.getElementById("clock");
 
@@ -34,10 +34,18 @@ function updateTime() {
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
 
-    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    const clockStart = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
-    timeElement.innerText = clockStr;
+    timeElement.innerText = clockStart;
 }
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = dd + '/' + mm + '/' + yyyy;
+document.write(today);
 
 updateTime();
 setInterval(updateTime, 1000);
