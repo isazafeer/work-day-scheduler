@@ -3,7 +3,7 @@ $(document).ready(function() {
   var timeDisplayEl = $('#time-display');
 
   function displayTime() {
-    var rightNow = dayjs().format('dddd, DD MMM YYYY, hh:mm:ss a');
+    var rightNow = dayjs().format('dddd, DD MMMM YYYY, hh:mm:ssa');
     timeDisplayEl.text(rightNow);
   }
   
