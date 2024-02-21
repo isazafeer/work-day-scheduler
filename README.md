@@ -1,22 +1,15 @@
-# work-day-scheduler
+Work Day Scheduler
 
-```md
-GIVEN I am using a daily planner to create a schedule
+In this week's challenge, I was tasked with creating a planner that allows a user to:
+    -Add text to time blocks
+    -Save these to local storage
+    -Keep them on the page after refreshing
+    -View availability for slots through the use of colours and real-time
 
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar ---DONE
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours of 9am&ndash;5pm ---DONE
+IMAGE
 
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future ---DONE
+IMAGE
 
-WHEN I click into a timeblock
-THEN I can enter an event ---DONE
+This week I was provided with a starter code to develop on, which required me to implement skills from last week's lessons. 
 
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage ---DONE
-
-WHEN I refresh the page
-THEN the saved events persist ---DONE
-```
+Once the deployed application runs, the user is greeted with a welcome message, a simple description for the site, and a live view of the current date, day, and time. Additionally, users can see the time slots on the left ranging from 9AM - 5PM, the time blocks that change colour to indicate availability, and their personal inputs that remain on the page despite refreshing. 
